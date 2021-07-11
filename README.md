@@ -19,15 +19,16 @@
 - 现代浏览器、IE11以上
 
 ## 🔗 链接  
-- [项目文档](http://doc.beike.plus/)
-- [项目首页](http://beike.plus/)
+- [项目文档](http://139.155.239.172/)
+- [项目首页](http://139.155.239.172:9536/)
 - [服务器部署](/deploy.md)
 
 ## 🍼 准备
 ### 1. 一个邮箱账号  
 用于发送验证码, 需要 [开启SMTP服务](https://www.yuque.com/pengyuanyuan-hqdma/ks1r1a/xs7xmn)  
 
-### 2. MySQL数据库
+### 2. MySQL数据库 
+> 本项目使用mysql 5.7版本
   - 方式1: [手动部署MySQL数据库](https://www.yuque.com/pengyuanyuan-hqdma/ks1r1a/vsw0o9)  
   - 方式2: 购买MySQL云服务  
 
@@ -53,6 +54,7 @@ port = 364          // 连接端口
 user = ****         // 公共邮箱账号
 pass = ****         // 授权密码
 ```
+> 如果项目报`host port`未找到, 可尝试将配置写死在项目中
 
 ### 5. 全局安装yarn
 ```
@@ -69,10 +71,10 @@ cd ./plugin
 yarn
 
 # 打包输出esm模块
-yarn build:umd
+yarn run build:umd
 
 # 启动组件库服务
-yarn server:dist
+yarn run server:dist
 ```
 打开 [http://127.0.0.1:8080/manifest.json](http://127.0.0.1:8080/manifest.json) 预览, 可以看到如下内容
 ```json
@@ -93,23 +95,23 @@ yarn server:dist
 ### 第二步 安装依赖
 安装client层依赖
 ```shell
-cd ./client && yarn
+cd ../client && yarn
 ```
 
 安装server层依赖
 ```shell
-cd ./server && yarn
+cd ../server && yarn
 ```
 
 ### 第三步 启动服务
 启动client层服务
 ```shell
-cd ./client && yarn start
+cd ../client && yarn start
 ```
 
 启动server层服务
 ```shell
-cd server && yarn dev
+cd ../server && yarn dev
 ```
 
 打开 [http://127.0.0.1:1234](http://127.0.0.1:1234) 预览, 可使用任意邮箱注册账号
@@ -121,7 +123,7 @@ cd server && yarn dev
 [CHANGELOG](/CHANGELOG.md)
 
 ## 🙋 问题咨询
-- QQ群 【河图开源交流】 1046702822
+- QQ群 【河图开源交流】 782899873
 
 ## ❤️ 主要贡献者
 
